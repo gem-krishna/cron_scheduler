@@ -28,6 +28,14 @@ pipeline {
                 echo "FLAG: ${params.FLAG}"
             }
         }
+        stage('Test'){
+            when {
+                expression { return params.FLAG == true && params.ENV == 'dev'}
+            }
+            steps {
+                echo 'FLAG is true, executing Test stage.'
+            }
+        }
     }
     post{
         success{
