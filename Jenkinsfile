@@ -2,7 +2,7 @@
 properties([
   parameters([
     string(name: 'ENV', defaultValue: 'User', description: 'Enter your name')
-    gbooleanParam(name: 'FLAG', defaultValue: false, description: 'A boolean parameter')
+    booleanParam(name: 'FLAG', defaultValue: false, description: 'A boolean parameter')
   ]),
   pipelineTriggers([
     parameterizedCron('''
