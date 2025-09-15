@@ -1,7 +1,7 @@
 // def cronExpression = '* */2 * * *'
 properties([
   parameters([
-    string(name: 'ENV', defaultValue: 'User', description: 'Enter your name')
+    string(name: 'ENV', defaultValue: 'User', description: 'Enter your name'),
     booleanParam(name: 'FLAG', defaultValue: false, description: 'A boolean parameter')
   ]),
   pipelineTriggers([
